@@ -4,17 +4,20 @@ import matplotlib.pyplot as plt
 import random
 
 def main():
-    N = 100000
-    s = np.zeros((N,1))
+    N = 100000                                      #number of repitions
+    s = np.zeros((N,1))                             #creates an array and appends zeros to it
+    #loop to roll the dice N times
     for i in range(0, N):
-        die1 = 0
-        die2 = 0
-        rolls = 0
+        die1 = 0                                    #creates first die
+        die2 = 0                                    #creates second die
+        rolls = 0                                   #counter for the number of rolls needed to roll 7
+        #loops until 7 is rolled, increments the counter each loop
         while(die1 + die2 != 7):
             die1 = random.randint(1,7)
             die2 = random.randint(1,7)
             rolls = rolls + 1
-        s[i] = rolls
+        s[i] = rolls                                #stores the number of rolls necessary
+    #matplotlib graph
     arrmax = np.max(s)
     b = range(1,int(arrmax) + 2)
     sb = np.size(b)
