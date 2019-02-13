@@ -13,8 +13,8 @@ def main():
         rolls = 0                                   #counter for the number of rolls needed to roll 7
         #loops until 7 is rolled, increments the counter each loop
         while(die1 + die2 != 7):
-            die1 = random.randint(1,7)
-            die2 = random.randint(1,7)
+            die1 = random.randint(1,6)
+            die2 = random.randint(1,6)
             rolls = rolls + 1
         s[i] = rolls                                #stores the number of rolls necessary
     #matplotlib graph
@@ -27,7 +27,7 @@ def main():
     plt.stem(b1,prob)
     plt.title('PMF for an unfair 7-sided die')
     plt.xlabel('Number of rolls')
-    plt.ylabel('Number of times')
+    plt.ylabel('Probability')
     plt.xticks(b1)
     plt.show()
 main()
