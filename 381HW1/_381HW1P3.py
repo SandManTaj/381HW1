@@ -9,10 +9,10 @@ def main():
     for i in range(0, N):
         hits = 0
         for j in range(0, 100):
-            if(random.randint(0,2) == 1):
-                hits = hits + 1
+            if(random.randint(0,1) == 1):
+                hits += 1
         if(hits == 50):
-            counter = counter + 1
+            counter += 1
     print("Probability: ", counter/N)
 
 main()
